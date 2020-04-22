@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-1c2k435tcmc20h2b3ekxinszk6zux81">
+  <files names="BinaryExpression_Editor.java:BinaryExpression_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:NumberLiteral_Editor.java:NumberLiteral_EditorBuilder_a.java:Statement_Editor.java:Statement_EditorBuilder_a.java:StringLateral_Editor.java:StringLateral_EditorBuilder_a.java:Variable_Editor.java:Variable_EditorBuilder_a.java:Workbook_Editor.java:Workbook_EditorBuilder_a.java" />
+</product>
+
