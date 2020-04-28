@@ -19,6 +19,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEmptyStatement = createDescriptorForEmptyStatement();
   /*package*/ final ConceptDescriptor myConceptEqualExpression = createDescriptorForEqualExpression();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
+  /*package*/ final ConceptDescriptor myConceptExpressionStatement = createDescriptorForExpressionStatement();
   /*package*/ final ConceptDescriptor myConceptMinusExpression = createDescriptorForMinusExpression();
   /*package*/ final ConceptDescriptor myConceptMulExpression = createDescriptorForMulExpression();
   /*package*/ final ConceptDescriptor myConceptNotEqualExpression = createDescriptorForNotEqualExpression();
@@ -42,7 +43,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBinaryExpression, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpression, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptStatement, myConceptStringLateral, myConceptVariable, myConceptWorkbook);
+    return Arrays.asList(myConceptBinaryExpression, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpression, myConceptExpressionStatement, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptStatement, myConceptStringLateral, myConceptVariable, myConceptWorkbook);
   }
 
   @Override
@@ -59,6 +60,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptEqualExpression;
       case LanguageConceptSwitch.Expression:
         return myConceptExpression;
+      case LanguageConceptSwitch.ExpressionStatement:
+        return myConceptExpressionStatement;
       case LanguageConceptSwitch.MinusExpression:
         return myConceptMinusExpression;
       case LanguageConceptSwitch.MulExpression:
@@ -132,6 +135,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, true, false);
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255604492");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExpressionStatement() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "ExpressionStatement", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6fa94d688599e262L);
+    b.class_(false, false, false);
+    b.super_("FirstLanguage.structure.Statement", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c1L);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8046047320587493986");
+    b.version(2);
+    b.aggregate("expr", 0x6fa94d688599e263L).target(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac556490cL).optional(false).ordered(true).multiple(false).origin("8046047320587493987").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMinusExpression() {
