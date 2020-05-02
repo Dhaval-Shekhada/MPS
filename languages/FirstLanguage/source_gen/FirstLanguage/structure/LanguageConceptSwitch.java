@@ -28,7 +28,7 @@ public final class LanguageConceptSwitch {
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL);
     builder.put(0x74b97e2ac5569c7eL, BinaryExpression);
-    builder.put(0x74b97e2ac5569c84L, DivExpression);
+    builder.put(0x6b35a5cf81124bc8L, DivExpression);
     builder.put(0x74b97e2ac5553643L, EmptyStatement);
     builder.put(0x74b97e2ac5569ca1L, EqualExpression);
     builder.put(0x74b97e2ac556490cL, Expression);

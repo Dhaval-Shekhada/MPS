@@ -114,7 +114,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.StringLateral:
         if (props_StringLateral == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("StringLateral");
+          cpb.rawPresentation("\"");
           props_StringLateral = cpb.create();
         }
         return props_StringLateral;

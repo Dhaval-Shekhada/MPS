@@ -105,10 +105,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDivExpression() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "DivExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c84L);
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "DivExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6b35a5cf81124bc8L);
     b.class_(false, false, false);
     b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
-    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255625860");
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/7725263046466227144");
     b.version(2);
     b.alias("/");
     return b.create();
@@ -205,6 +205,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255714215");
     b.version(2);
     b.property("value", 0x74b97e2ac557f5a8L).type(PrimitiveTypeId.STRING).origin("8410892501255714216").done();
+    b.alias("\"");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVariable() {

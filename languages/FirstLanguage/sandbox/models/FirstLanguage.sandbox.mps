@@ -18,6 +18,7 @@
         <property id="8410892501255714216" name="value" index="2LVCI2" />
       </concept>
       <concept id="8410892501255615138" name="FirstLanguage.structure.PlusExpression" flags="ng" index="2LVKM8" />
+      <concept id="8410892501255615140" name="FirstLanguage.structure.MulExpression" flags="ng" index="2LVKMe" />
       <concept id="8410892501255604489" name="FirstLanguage.structure.NumberLiteral" flags="ng" index="2LVNsz">
         <property id="8410892501255604490" name="value" index="2LVNsw" />
       </concept>
@@ -70,7 +71,47 @@
         </node>
       </node>
     </node>
-    <node concept="2LV4xD" id="5y6ycypkCxH" role="2LVvJI" />
+    <node concept="3EcaWa" id="5y6ycyplnDz" role="2LVvJI">
+      <node concept="2LVKM8" id="5y6ycyplnEc" role="3EcaWb">
+        <node concept="2LVNsz" id="5y6ycyplnE8" role="2LVY9l">
+          <property role="2LVNsw" value="1234" />
+        </node>
+        <node concept="2LVKM8" id="5y6ycyplnEo" role="2LVYaF">
+          <node concept="2LVNsz" id="5y6ycyplnEk" role="2LVY9l">
+            <property role="2LVNsw" value="123" />
+          </node>
+          <node concept="2LVNsz" id="5y6ycyplnEw" role="2LVYaF">
+            <property role="2LVNsw" value="1" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2LVvJE" id="6GPDsY1cRgm" role="2LVvJI">
+      <property role="TrG5h" value="s" />
+      <node concept="2LVKMe" id="6FcgRzeBuJX" role="2LVNsV">
+        <node concept="2LVKM8" id="6FcgRzeBuJY" role="2LVY9l">
+          <node concept="2LVNsz" id="6GPDsY1cRgN" role="2LVY9l">
+            <property role="2LVNsw" value="1" />
+          </node>
+          <node concept="2LVNsz" id="6FcgRzeBuJP" role="2LVYaF">
+            <property role="2LVNsw" value="10" />
+          </node>
+        </node>
+        <node concept="2LVNsz" id="6FcgRzeBuK8" role="2LVYaF">
+          <property role="2LVNsw" value="5" />
+        </node>
+      </node>
+    </node>
+    <node concept="3EcaWa" id="6FcgRzeCUs1" role="2LVvJI">
+      <node concept="2LVKM8" id="6FcgRzeFUNN" role="3EcaWb">
+        <node concept="2LVCId" id="6FcgRzeFUO3" role="2LVYaF">
+          <property role="2LVCI2" value="15" />
+        </node>
+        <node concept="2LVNsz" id="6FcgRzeEDg0" role="2LVY9l">
+          <property role="2LVNsw" value="10" />
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 

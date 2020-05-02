@@ -54,8 +54,14 @@
       </concept>
       <concept id="1153138554286" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_propertyValue" flags="nn" index="1Wqviy" />
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="1M2fIO" id="6YDjmy5ANO1">
+    <property role="3GE5qa" value="stmt" />
     <ref role="1M2myG" to="go1j:7iTvyF5l$$9" resolve="NumberLiteral" />
     <node concept="EnEH3" id="6YDjmy5ANO2" role="1MhHOB">
       <ref role="EomxK" to="go1j:7iTvyF5l$$a" resolve="value" />
