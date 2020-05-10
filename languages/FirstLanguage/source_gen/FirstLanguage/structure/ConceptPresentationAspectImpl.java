@@ -9,12 +9,18 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_BinaryArithmaicOperations;
+  private ConceptPresentation props_BinaryComaprisionExpression;
   private ConceptPresentation props_BinaryExpression;
   private ConceptPresentation props_DivExpression;
   private ConceptPresentation props_EmptyStatement;
   private ConceptPresentation props_EqualExpression;
   private ConceptPresentation props_Expression;
   private ConceptPresentation props_ExpressionStatement;
+  private ConceptPresentation props_GreaterEqualExpression;
+  private ConceptPresentation props_GreaterThanExpression;
+  private ConceptPresentation props_LessThanEqualExpression;
+  private ConceptPresentation props_LessThanExpression;
   private ConceptPresentation props_MinusExpression;
   private ConceptPresentation props_MulExpression;
   private ConceptPresentation props_NotEqualExpression;
@@ -30,6 +36,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.BinaryArithmaicOperations:
+        if (props_BinaryArithmaicOperations == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_BinaryArithmaicOperations = cpb.create();
+        }
+        return props_BinaryArithmaicOperations;
+      case LanguageConceptSwitch.BinaryComaprisionExpression:
+        if (props_BinaryComaprisionExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_BinaryComaprisionExpression = cpb.create();
+        }
+        return props_BinaryComaprisionExpression;
       case LanguageConceptSwitch.BinaryExpression:
         if (props_BinaryExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -70,6 +88,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ExpressionStatement = cpb.create();
         }
         return props_ExpressionStatement;
+      case LanguageConceptSwitch.GreaterEqualExpression:
+        if (props_GreaterEqualExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation(">=");
+          props_GreaterEqualExpression = cpb.create();
+        }
+        return props_GreaterEqualExpression;
+      case LanguageConceptSwitch.GreaterThanExpression:
+        if (props_GreaterThanExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation(">");
+          props_GreaterThanExpression = cpb.create();
+        }
+        return props_GreaterThanExpression;
+      case LanguageConceptSwitch.LessThanEqualExpression:
+        if (props_LessThanEqualExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("<=");
+          props_LessThanEqualExpression = cpb.create();
+        }
+        return props_LessThanEqualExpression;
+      case LanguageConceptSwitch.LessThanExpression:
+        if (props_LessThanExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("<");
+          props_LessThanExpression = cpb.create();
+        }
+        return props_LessThanExpression;
       case LanguageConceptSwitch.MinusExpression:
         if (props_MinusExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

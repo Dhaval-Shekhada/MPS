@@ -139,7 +139,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
         public Iterable<SubstituteMenuItem> query() {
           List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
           _context.getEditorMenuTrace().pushTraceInfo();
-          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "7725263046465513028")));
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "5875699198687710718")));
           try {
             if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BinaryExpression$Ih)) {
               final SAbstractConcept wrappedConcept = CONCEPTS.Expression$s;
@@ -216,7 +216,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
         public Iterable<SubstituteMenuItem> query() {
           List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
           _context.getEditorMenuTrace().pushTraceInfo();
-          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "7725263046465513046")));
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "5875699198687711343")));
           try {
             if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BinaryExpression$Ih)) {
               final SAbstractConcept wrappedConcept = CONCEPTS.Expression$s;
@@ -416,7 +416,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
-              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "7725263046465513028")));
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "5875699198687710718")));
               try {
                 if (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) {
                   final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$s, null);
@@ -512,7 +512,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
-              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "7725263046465513046")));
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "5875699198687711343")));
               try {
                 if (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM) {
                   final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$s, null);

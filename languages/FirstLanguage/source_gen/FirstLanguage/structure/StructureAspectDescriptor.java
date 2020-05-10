@@ -14,12 +14,18 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptBinaryArithmaicOperations = createDescriptorForBinaryArithmaicOperations();
+  /*package*/ final ConceptDescriptor myConceptBinaryComaprisionExpression = createDescriptorForBinaryComaprisionExpression();
   /*package*/ final ConceptDescriptor myConceptBinaryExpression = createDescriptorForBinaryExpression();
   /*package*/ final ConceptDescriptor myConceptDivExpression = createDescriptorForDivExpression();
   /*package*/ final ConceptDescriptor myConceptEmptyStatement = createDescriptorForEmptyStatement();
   /*package*/ final ConceptDescriptor myConceptEqualExpression = createDescriptorForEqualExpression();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
   /*package*/ final ConceptDescriptor myConceptExpressionStatement = createDescriptorForExpressionStatement();
+  /*package*/ final ConceptDescriptor myConceptGreaterEqualExpression = createDescriptorForGreaterEqualExpression();
+  /*package*/ final ConceptDescriptor myConceptGreaterThanExpression = createDescriptorForGreaterThanExpression();
+  /*package*/ final ConceptDescriptor myConceptLessThanEqualExpression = createDescriptorForLessThanEqualExpression();
+  /*package*/ final ConceptDescriptor myConceptLessThanExpression = createDescriptorForLessThanExpression();
   /*package*/ final ConceptDescriptor myConceptMinusExpression = createDescriptorForMinusExpression();
   /*package*/ final ConceptDescriptor myConceptMulExpression = createDescriptorForMulExpression();
   /*package*/ final ConceptDescriptor myConceptNotEqualExpression = createDescriptorForNotEqualExpression();
@@ -39,17 +45,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.aggregatedLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBinaryExpression, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpression, myConceptExpressionStatement, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptStatement, myConceptStringLateral, myConceptVariable, myConceptWorkbook);
+    return Arrays.asList(myConceptBinaryArithmaicOperations, myConceptBinaryComaprisionExpression, myConceptBinaryExpression, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpression, myConceptExpressionStatement, myConceptGreaterEqualExpression, myConceptGreaterThanExpression, myConceptLessThanEqualExpression, myConceptLessThanExpression, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptStatement, myConceptStringLateral, myConceptVariable, myConceptWorkbook);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.BinaryArithmaicOperations:
+        return myConceptBinaryArithmaicOperations;
+      case LanguageConceptSwitch.BinaryComaprisionExpression:
+        return myConceptBinaryComaprisionExpression;
       case LanguageConceptSwitch.BinaryExpression:
         return myConceptBinaryExpression;
       case LanguageConceptSwitch.DivExpression:
@@ -62,6 +73,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptExpression;
       case LanguageConceptSwitch.ExpressionStatement:
         return myConceptExpressionStatement;
+      case LanguageConceptSwitch.GreaterEqualExpression:
+        return myConceptGreaterEqualExpression;
+      case LanguageConceptSwitch.GreaterThanExpression:
+        return myConceptGreaterThanExpression;
+      case LanguageConceptSwitch.LessThanEqualExpression:
+        return myConceptLessThanEqualExpression;
+      case LanguageConceptSwitch.LessThanExpression:
+        return myConceptLessThanExpression;
       case LanguageConceptSwitch.MinusExpression:
         return myConceptMinusExpression;
       case LanguageConceptSwitch.MulExpression:
@@ -94,6 +113,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForBinaryArithmaicOperations() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "BinaryArithmaicOperations", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L);
+    b.class_(false, true, false);
+    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/1069986690422115077");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBinaryComaprisionExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "BinaryComaprisionExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L);
+    b.class_(false, true, false);
+    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/1069986690422115076");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForBinaryExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
     b.class_(false, true, false);
@@ -107,7 +142,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForDivExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "DivExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6b35a5cf81124bc8L);
     b.class_(false, false, false);
-    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.super_("FirstLanguage.structure.BinaryArithmaicOperations", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L);
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/7725263046466227144");
     b.version(2);
     b.alias("/");
@@ -124,7 +159,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForEqualExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "EqualExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569ca1L);
     b.class_(false, false, false);
-    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.super_("FirstLanguage.structure.BinaryComaprisionExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L);
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255625889");
     b.version(2);
     b.alias("==");
@@ -146,10 +181,46 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("expr", 0x6fa94d688599e263L).target(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac556490cL).optional(false).ordered(true).multiple(false).origin("8046047320587493987").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForGreaterEqualExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "GreaterEqualExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd260L);
+    b.class_(false, false, false);
+    b.super_("FirstLanguage.structure.BinaryComaprisionExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/1069986690422002272");
+    b.version(2);
+    b.alias(">=");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForGreaterThanExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "GreaterThanExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd25eL);
+    b.class_(false, false, false);
+    b.super_("FirstLanguage.structure.BinaryComaprisionExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/1069986690422002270");
+    b.version(2);
+    b.alias(">");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForLessThanEqualExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "LessThanEqualExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd261L);
+    b.class_(false, false, false);
+    b.super_("FirstLanguage.structure.BinaryComaprisionExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/1069986690422002273");
+    b.version(2);
+    b.alias("<=");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForLessThanExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "LessThanExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd25fL);
+    b.class_(false, false, false);
+    b.super_("FirstLanguage.structure.BinaryComaprisionExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/1069986690422002271");
+    b.version(2);
+    b.alias("<");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForMinusExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "MinusExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a3L);
     b.class_(false, false, false);
-    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.super_("FirstLanguage.structure.BinaryArithmaicOperations", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L);
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255615139");
     b.version(2);
     b.alias("-");
@@ -158,7 +229,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForMulExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "MulExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a4L);
     b.class_(false, false, false);
-    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.super_("FirstLanguage.structure.BinaryArithmaicOperations", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L);
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255615140");
     b.version(2);
     b.alias("*");
@@ -167,7 +238,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForNotEqualExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "NotEqualExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac557c6b7L);
     b.class_(false, false, false);
-    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.super_("FirstLanguage.structure.BinaryComaprisionExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L);
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255702199");
     b.version(2);
     b.alias("!=");
@@ -185,7 +256,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForPlusExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "PlusExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a2L);
     b.class_(false, false, false);
-    b.super_("FirstLanguage.structure.BinaryExpression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL);
+    b.super_("FirstLanguage.structure.BinaryArithmaicOperations", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L);
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255615138");
     b.version(2);
     b.alias("+");
@@ -216,6 +287,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8410892501255488960");
     b.version(2);
     b.aggregate("value", 0x74b97e2ac5564911L).target(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac556490cL).optional(false).ordered(true).multiple(false).origin("8410892501255604497").done();
+    b.aggregate("type", 0xed95b39d52dcf5fL).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506dL).optional(true).ordered(true).multiple(false).origin("1069986690425016159").done();
+    b.alias("var");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWorkbook() {

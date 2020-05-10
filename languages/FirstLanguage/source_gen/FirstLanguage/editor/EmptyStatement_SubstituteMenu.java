@@ -24,7 +24,7 @@ public class EmptyStatement_SubstituteMenu extends SubstituteMenuBase {
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for " + "EmptyStatement", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "8046047320587620772")));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for " + "EmptyStatement", new SNodePointer("r:5f2c1334-fc6f-4612-8049-05cb34867353(FirstLanguage.editor)", "5875699198687530962")));
     try {
       return super.createMenuItems(context);
     } finally {

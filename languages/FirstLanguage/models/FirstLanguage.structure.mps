@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -67,6 +68,7 @@
     <property role="EcuMT" value="8410892501255488960" />
     <property role="TrG5h" value="Variable" />
     <property role="3GE5qa" value="stmt" />
+    <property role="34LRSv" value="var" />
     <ref role="1TJDcQ" node="7iTvyF5l8n1" resolve="Statement" />
     <node concept="PrWs8" id="7iTvyF5l8n2" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -77,6 +79,12 @@
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7iTvyF5l$$c" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="VpmNBlbsXv" role="1TKVEi">
+      <property role="IQ2ns" value="1069986690425016159" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="type" />
+      <ref role="20lvS9" to="tpee:fz3vP1H" resolve="Type" />
     </node>
   </node>
   <node concept="1TIwiD" id="7iTvyF5l8n1">
@@ -115,21 +123,21 @@
     <property role="TrG5h" value="PlusExpression" />
     <property role="34LRSv" value="+" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="VpmNBl0oG5" resolve="BinaryArithmaicOperations" />
   </node>
   <node concept="1TIwiD" id="7iTvyF5lBaz">
     <property role="EcuMT" value="8410892501255615139" />
     <property role="TrG5h" value="MinusExpression" />
     <property role="34LRSv" value="-" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="VpmNBl0oG5" resolve="BinaryArithmaicOperations" />
   </node>
   <node concept="1TIwiD" id="7iTvyF5lBa$">
     <property role="EcuMT" value="8410892501255615140" />
     <property role="TrG5h" value="MulExpression" />
     <property role="34LRSv" value="*" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="VpmNBl0oG5" resolve="BinaryArithmaicOperations" />
   </node>
   <node concept="1TIwiD" id="7iTvyF5lDLY">
     <property role="EcuMT" value="8410892501255625854" />
@@ -157,14 +165,14 @@
     <property role="TrG5h" value="EqualExpression" />
     <property role="34LRSv" value="==" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="VpmNBl0oG4" resolve="BinaryComaprisionExpression" />
   </node>
   <node concept="1TIwiD" id="7iTvyF5lWqR">
     <property role="EcuMT" value="8410892501255702199" />
     <property role="TrG5h" value="NotEqualExpression" />
     <property role="34LRSv" value="!=" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="VpmNBl0oG4" resolve="BinaryComaprisionExpression" />
   </node>
   <node concept="1TIwiD" id="7iTvyF5lZmB">
     <property role="EcuMT" value="8410892501255714215" />
@@ -196,6 +204,48 @@
     <property role="TrG5h" value="DivExpression" />
     <property role="34LRSv" value="/" />
     <property role="3GE5qa" value="expr.binary" />
+    <ref role="1TJDcQ" node="VpmNBl0oG5" resolve="BinaryArithmaicOperations" />
+  </node>
+  <node concept="1TIwiD" id="VpmNBkZX9u">
+    <property role="EcuMT" value="1069986690422002270" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="GreaterThanExpression" />
+    <property role="34LRSv" value="&gt;" />
+    <ref role="1TJDcQ" node="VpmNBl0oG4" resolve="BinaryComaprisionExpression" />
+  </node>
+  <node concept="1TIwiD" id="VpmNBkZX9v">
+    <property role="EcuMT" value="1069986690422002271" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="LessThanExpression" />
+    <property role="34LRSv" value="&lt;" />
+    <ref role="1TJDcQ" node="VpmNBl0oG4" resolve="BinaryComaprisionExpression" />
+  </node>
+  <node concept="1TIwiD" id="VpmNBkZX9w">
+    <property role="EcuMT" value="1069986690422002272" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="GreaterEqualExpression" />
+    <property role="34LRSv" value="&gt;=" />
+    <ref role="1TJDcQ" node="VpmNBl0oG4" resolve="BinaryComaprisionExpression" />
+  </node>
+  <node concept="1TIwiD" id="VpmNBkZX9x">
+    <property role="EcuMT" value="1069986690422002273" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="LessThanEqualExpression" />
+    <property role="34LRSv" value="&lt;=" />
+    <ref role="1TJDcQ" node="VpmNBl0oG4" resolve="BinaryComaprisionExpression" />
+  </node>
+  <node concept="1TIwiD" id="VpmNBl0oG4">
+    <property role="EcuMT" value="1069986690422115076" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BinaryComaprisionExpression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="VpmNBl0oG5">
+    <property role="EcuMT" value="1069986690422115077" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BinaryArithmaicOperations" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
   </node>
 </model>

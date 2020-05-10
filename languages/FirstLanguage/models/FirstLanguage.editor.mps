@@ -36,6 +36,7 @@
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="3308396621974580100" name="jetbrains.mps.lang.editor.structure.SubstituteMenu_Default" flags="ng" index="3p36aQ" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1214560368769" name="emptyNoTargetText" index="39s7Ar" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -120,8 +121,9 @@
     <property role="3GE5qa" value="stmt" />
     <ref role="1XX52x" to="go1j:7iTvyF5l8n0" resolve="Variable" />
     <node concept="3EZMnI" id="6GPDsY1cnen" role="2wV5jI">
-      <node concept="3F0ifn" id="6GPDsY1cneu" role="3EZMnx">
-        <property role="3F0ifm" value="var" />
+      <node concept="3F1sOY" id="VpmNBlbsYd" role="3EZMnx">
+        <property role="39s7Ar" value="true" />
+        <ref role="1NtTu8" to="go1j:VpmNBlbsXv" resolve="type" />
       </node>
       <node concept="3F0A7n" id="6GPDsY1cne$" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
@@ -198,25 +200,25 @@
         </node>
       </node>
       <node concept="3EZMnI" id="6GPDsY11QoX" role="1LiK7o">
-        <node concept="1kIj98" id="6GPDsY11Qp4" role="3EZMnx">
-          <node concept="3F1sOY" id="6GPDsY11Qpa" role="1kIj9b">
+        <node concept="1kIj98" id="56aFkDoP0RY" role="3EZMnx">
+          <node concept="3F1sOY" id="56aFkDoP0SM" role="1kIj9b">
             <ref role="1NtTu8" to="go1j:7iTvyF5lDLZ" resolve="left" />
           </node>
         </node>
-        <node concept="1Lj6DL" id="6GPDsY11Qpy" role="3EZMnx">
-          <node concept="1Lj6DC" id="6GPDsY11Qp$" role="1Lj8FM">
-            <node concept="3clFbS" id="6GPDsY11QpA" role="2VODD2">
-              <node concept="3clFbF" id="6GPDsY11Qui" role="3cqZAp">
-                <node concept="2OqwBi" id="6GPDsY11QZ7" role="3clFbG">
-                  <node concept="1Lj6YZ" id="6GPDsY11Quh" role="2Oq$k0" />
-                  <node concept="3n3YKJ" id="6GPDsY11Rs1" role="2OqNvi" />
+        <node concept="1Lj6DL" id="56aFkDoNsNT" role="3EZMnx">
+          <node concept="1Lj6DC" id="56aFkDoNsNV" role="1Lj8FM">
+            <node concept="3clFbS" id="56aFkDoNsNX" role="2VODD2">
+              <node concept="3clFbF" id="56aFkDoNsSD" role="3cqZAp">
+                <node concept="2OqwBi" id="56aFkDoNtjh" role="3clFbG">
+                  <node concept="1Lj6YZ" id="56aFkDoNsSC" role="2Oq$k0" />
+                  <node concept="3n3YKJ" id="56aFkDoNtBI" role="2OqNvi" />
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1kIj98" id="6GPDsY11Qpm" role="3EZMnx">
-          <node concept="3F1sOY" id="6GPDsY11Qpv" role="1kIj9b">
+        <node concept="1kIj98" id="56aFkDoP11J" role="3EZMnx">
+          <node concept="3F1sOY" id="56aFkDoP12$" role="1kIj9b">
             <ref role="1NtTu8" to="go1j:7iTvyF5lDM1" resolve="right" />
           </node>
         </node>
@@ -264,8 +266,7 @@
       </node>
     </node>
   </node>
-  <node concept="3p36aQ" id="6YDjmy5AX6$">
-    <property role="3GE5qa" value="stmt" />
+  <node concept="3p36aQ" id="56aFkDoOkZi">
     <ref role="aqKnT" to="go1j:7iTvyF5ljp3" resolve="EmptyStatement" />
   </node>
 </model>
