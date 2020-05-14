@@ -29,11 +29,23 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_BooleanType_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_IntegerType_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_NumberLiteral_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
       InferenceRule_Runtime inferenceRule = new typeof_StringLateral_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_StringType_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -45,13 +57,13 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.BinaryComaprisionExpression$5b));
-    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.EqualExpression$tJ));
+    this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_b(CONCEPTS.BinaryComaprisionExpression$5b));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_c(CONCEPTS.BinaryArithmaicOperations$5E));
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_d(CONCEPTS.PlusExpression$Pj));
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createStringType_3ist9o_a0a0a0a0a0a0a11a0();
+          this.myOperandType = createStringType_3ist9o_a0a0a0a0a0a0a41a0();
           this.myOperationConcept = CONCEPTS.PlusExpression$Pj;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -59,7 +71,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
           this.myRuleNodeId = "1069986690424664020";
         }
         public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
-          return createStringType_3ist9o_a0a1a0a0a0a0l0a();
+          return createStringType_3ist9o_a0a1a0a0a0a0o0a();
         }
         @Override
         public void reportConflict(IRuleConflictWarningProducer producer) {
@@ -197,18 +209,17 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return rootBuilder1.getResult();
     }
   }
-  private static SNode createStringType_3ist9o_a0a0a0a0a0a0a11a0() {
+  private static SNode createStringType_3ist9o_a0a0a0a0a0a0a41a0() {
     SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
     return rootBuilder1.getResult();
   }
-  private static SNode createStringType_3ist9o_a0a1a0a0a0a0l0a() {
+  private static SNode createStringType_3ist9o_a0a1a0a0a0a0o0a() {
     SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
     return rootBuilder1.getResult();
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept BinaryComaprisionExpression$5b = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L, "FirstLanguage.structure.BinaryComaprisionExpression");
-    /*package*/ static final SConcept EqualExpression$tJ = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569ca1L, "FirstLanguage.structure.EqualExpression");
     /*package*/ static final SConcept BinaryArithmaicOperations$5E = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L, "FirstLanguage.structure.BinaryArithmaicOperations");
     /*package*/ static final SConcept PlusExpression$Pj = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a2L, "FirstLanguage.structure.PlusExpression");
     /*package*/ static final SConcept IntegerType$Eo = MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf940d22479L, "jetbrains.mps.baseLanguage.structure.IntegerType");

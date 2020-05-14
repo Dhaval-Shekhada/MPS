@@ -48,6 +48,7 @@
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_BinaryArithmaicOperations" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_BinaryComaprisionExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_BinaryExpression" />
+    <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_BooleanType" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_DivExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_EmptyStatement" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_EqualExpression" />
@@ -55,17 +56,21 @@
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_ExpressionStatement" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_GreaterEqualExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_GreaterThanExpression" />
+    <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_IntegerType" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_LessThanEqualExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_LessThanExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_MinusExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_MulExpression" />
+    <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_MyType" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_NotEqualExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_NumberLiteral" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_PlusExpression" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_Statement" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_StringLateral" />
+    <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_StringType" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_Variable" />
     <classNode dependClassName="FirstLanguage.editor.GrammarCellsSubstituteMenu_Workbook" />
+    <classNode dependClassName="FirstLanguage.editor.MyType_Editor" />
     <classNode dependClassName="FirstLanguage.editor.NumberLiteral_Editor" />
     <classNode dependClassName="FirstLanguage.editor.Statement_Editor" />
     <classNode dependClassName="FirstLanguage.editor.StringLateral_Editor" />
@@ -263,6 +268,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
+  <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_BooleanType">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
   <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_DivExpression">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
@@ -389,6 +412,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
+  <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_IntegerType">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
   <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_LessThanEqualExpression">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
@@ -444,6 +485,24 @@
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
   <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_MulExpression">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_MyType">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -551,6 +610,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
+  <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_StringType">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
   <dependency className="FirstLanguage.editor.GrammarCellsSubstituteMenu_Variable">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
@@ -586,6 +663,27 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="FirstLanguage.editor.MyType_Editor">
+    <classNode dependClassName="FirstLanguage.editor.MyType_EditorBuilder_a" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="FirstLanguage.editor.MyType_EditorBuilder_a">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.cells.BigCellUtil" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.MPSColors" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.StyleRegistry" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
   <dependency className="FirstLanguage.editor.NumberLiteral_Editor">
     <classNode dependClassName="FirstLanguage.editor.NumberLiteral_EditorBuilder_a" />

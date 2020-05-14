@@ -10,6 +10,7 @@
     <import index="go1j" ref="r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="u9k4" ref="r:273a47f7-ccf4-411e-b473-4bd7c64542da(FirstLanguage.behavior)" implicit="true" />
+    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -24,6 +25,13 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
+      </concept>
+      <concept id="1186403694788" name="jetbrains.mps.lang.editor.structure.ColorStyleClassItem" flags="ln" index="VaVBg">
+        <property id="1186403713874" name="color" index="Vb096" />
+      </concept>
+      <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
@@ -36,7 +44,6 @@
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="3308396621974580100" name="jetbrains.mps.lang.editor.structure.SubstituteMenu_Default" flags="ng" index="3p36aQ" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
-        <property id="1214560368769" name="emptyNoTargetText" index="39s7Ar" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -121,12 +128,17 @@
     <property role="3GE5qa" value="stmt" />
     <ref role="1XX52x" to="go1j:7iTvyF5l8n0" resolve="Variable" />
     <node concept="3EZMnI" id="6GPDsY1cnen" role="2wV5jI">
-      <node concept="3F1sOY" id="VpmNBlbsYd" role="3EZMnx">
-        <property role="39s7Ar" value="true" />
-        <ref role="1NtTu8" to="go1j:VpmNBlbsXv" resolve="type" />
+      <node concept="3F0ifn" id="6DnZTr$3sGH" role="3EZMnx">
+        <property role="3F0ifm" value="var" />
       </node>
       <node concept="3F0A7n" id="6GPDsY1cne$" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="6DnZTr$0Znr" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F1sOY" id="6DnZTr$0ZnI" role="3EZMnx">
+        <ref role="1NtTu8" to="go1j:VpmNBlbsXv" resolve="type" />
       </node>
       <node concept="3F0ifn" id="6GPDsY1cneG" role="3EZMnx">
         <property role="3F0ifm" value="=" />
@@ -268,6 +280,15 @@
   </node>
   <node concept="3p36aQ" id="56aFkDoOkZi">
     <ref role="aqKnT" to="go1j:7iTvyF5ljp3" resolve="EmptyStatement" />
+  </node>
+  <node concept="24kQdi" id="6DnZTr$1yXl">
+    <ref role="1XX52x" to="go1j:6DnZTr$1yXj" resolve="MyType" />
+    <node concept="PMmxH" id="6DnZTr$1yXn" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      <node concept="VechU" id="6DnZTr$1yXr" role="3F10Kt">
+        <property role="Vb096" value="g1_eI4o/darkBlue" />
+      </node>
+    </node>
   </node>
 </model>
 

@@ -27,14 +27,16 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 2:
         return Collections.<ConceptEditor>singletonList(new ExpressionStatement_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new NumberLiteral_Editor());
+        return Collections.<ConceptEditor>singletonList(new MyType_Editor());
       case 4:
-        return Collections.<ConceptEditor>singletonList(new Statement_Editor());
+        return Collections.<ConceptEditor>singletonList(new NumberLiteral_Editor());
       case 5:
-        return Collections.<ConceptEditor>singletonList(new StringLateral_Editor());
+        return Collections.<ConceptEditor>singletonList(new Statement_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new Variable_Editor());
+        return Collections.<ConceptEditor>singletonList(new StringLateral_Editor());
       case 7:
+        return Collections.<ConceptEditor>singletonList(new Variable_Editor());
+      case 8:
         return Collections.<ConceptEditor>singletonList(new Workbook_Editor());
       default:
     }
@@ -65,47 +67,55 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 2:
         return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_BinaryExpression());
       case 3:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_DivExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_BooleanType());
       case 4:
-        return Arrays.asList(new SubstituteMenu[]{new EmptyStatement_SubstituteMenu(), new GrammarCellsSubstituteMenu_EmptyStatement()});
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_DivExpression());
       case 5:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_EqualExpression());
+        return Arrays.asList(new SubstituteMenu[]{new EmptyStatement_SubstituteMenu(), new GrammarCellsSubstituteMenu_EmptyStatement()});
       case 6:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_Expression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_EqualExpression());
       case 7:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_ExpressionStatement());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_Expression());
       case 8:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_GreaterEqualExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_ExpressionStatement());
       case 9:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_GreaterThanExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_GreaterEqualExpression());
       case 10:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_LessThanEqualExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_GreaterThanExpression());
       case 11:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_LessThanExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_IntegerType());
       case 12:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_MinusExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_LessThanEqualExpression());
       case 13:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_MulExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_LessThanExpression());
       case 14:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_NotEqualExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_MinusExpression());
       case 15:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_NumberLiteral());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_MulExpression());
       case 16:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_PlusExpression());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_MyType());
       case 17:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_Statement());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_NotEqualExpression());
       case 18:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_StringLateral());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_NumberLiteral());
       case 19:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_Variable());
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_PlusExpression());
       case 20:
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_Statement());
+      case 21:
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_StringLateral());
+      case 22:
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_StringType());
+      case 23:
+        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_Variable());
+      case 24:
         return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_Workbook());
       default:
     }
     return Collections.<SubstituteMenu>emptyList();
   }
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5553643L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6fa94d688599e262L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5564909L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c1L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac557f5a7L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c0L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485bfL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5553643L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6fa94d688599e262L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f53L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5564909L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c1L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac557f5a7L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c0L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485bfL)).seal();
   private static final ConceptSwitchIndex conceptIndex1 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).seal();
-  private static final ConceptSwitchIndex conceptIndex2 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6b35a5cf81124bc8L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5553643L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569ca1L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac556490cL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6fa94d688599e262L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd260L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd25eL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd261L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd25fL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a3L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a4L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac557c6b7L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5564909L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a2L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c1L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac557f5a7L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c0L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485bfL)).seal();
+  private static final ConceptSwitchIndex conceptIndex2 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569c7eL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f5aL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6b35a5cf81124bc8L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5553643L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5569ca1L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac556490cL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6fa94d688599e262L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd260L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd25eL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f54L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd261L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d4ffd25fL), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a3L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a4L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f53L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac557c6b7L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac5564909L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a2L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c1L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac557f5a7L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f59L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c0L), MetaIdFactory.conceptId(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485bfL)).seal();
 }

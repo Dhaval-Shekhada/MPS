@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BinaryArithmaicOperations;
   private ConceptPresentation props_BinaryComaprisionExpression;
   private ConceptPresentation props_BinaryExpression;
+  private ConceptPresentation props_BooleanType;
   private ConceptPresentation props_DivExpression;
   private ConceptPresentation props_EmptyStatement;
   private ConceptPresentation props_EqualExpression;
@@ -19,15 +20,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ExpressionStatement;
   private ConceptPresentation props_GreaterEqualExpression;
   private ConceptPresentation props_GreaterThanExpression;
+  private ConceptPresentation props_IntegerType;
   private ConceptPresentation props_LessThanEqualExpression;
   private ConceptPresentation props_LessThanExpression;
   private ConceptPresentation props_MinusExpression;
   private ConceptPresentation props_MulExpression;
+  private ConceptPresentation props_MyType;
   private ConceptPresentation props_NotEqualExpression;
   private ConceptPresentation props_NumberLiteral;
   private ConceptPresentation props_PlusExpression;
   private ConceptPresentation props_Statement;
   private ConceptPresentation props_StringLateral;
+  private ConceptPresentation props_StringType;
   private ConceptPresentation props_Variable;
   private ConceptPresentation props_Workbook;
 
@@ -54,6 +58,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BinaryExpression = cpb.create();
         }
         return props_BinaryExpression;
+      case LanguageConceptSwitch.BooleanType:
+        if (props_BooleanType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("bool");
+          props_BooleanType = cpb.create();
+        }
+        return props_BooleanType;
       case LanguageConceptSwitch.DivExpression:
         if (props_DivExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -102,6 +113,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GreaterThanExpression = cpb.create();
         }
         return props_GreaterThanExpression;
+      case LanguageConceptSwitch.IntegerType:
+        if (props_IntegerType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("int");
+          props_IntegerType = cpb.create();
+        }
+        return props_IntegerType;
       case LanguageConceptSwitch.LessThanEqualExpression:
         if (props_LessThanEqualExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -130,6 +148,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MulExpression = cpb.create();
         }
         return props_MulExpression;
+      case LanguageConceptSwitch.MyType:
+        if (props_MyType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_MyType = cpb.create();
+        }
+        return props_MyType;
       case LanguageConceptSwitch.NotEqualExpression:
         if (props_NotEqualExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -164,6 +188,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StringLateral = cpb.create();
         }
         return props_StringLateral;
+      case LanguageConceptSwitch.StringType:
+        if (props_StringType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("string");
+          props_StringType = cpb.create();
+        }
+        return props_StringType;
       case LanguageConceptSwitch.Variable:
         if (props_Variable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -7,7 +7,6 @@
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -84,7 +83,7 @@
       <property role="IQ2ns" value="1069986690425016159" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="type" />
-      <ref role="20lvS9" to="tpee:fz3vP1H" resolve="Type" />
+      <ref role="20lvS9" node="6DnZTr$1yXj" resolve="MyType" />
     </node>
   </node>
   <node concept="1TIwiD" id="7iTvyF5l8n1">
@@ -247,6 +246,30 @@
     <property role="TrG5h" value="BinaryArithmaicOperations" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="7iTvyF5lDLY" resolve="BinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="6DnZTr$1yXj">
+    <property role="EcuMT" value="7662874314529976147" />
+    <property role="TrG5h" value="MyType" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6DnZTr$1yXk">
+    <property role="EcuMT" value="7662874314529976148" />
+    <property role="TrG5h" value="IntegerType" />
+    <property role="34LRSv" value="int" />
+    <ref role="1TJDcQ" node="6DnZTr$1yXj" resolve="MyType" />
+  </node>
+  <node concept="1TIwiD" id="6DnZTr$1yXp">
+    <property role="EcuMT" value="7662874314529976153" />
+    <property role="TrG5h" value="StringType" />
+    <property role="34LRSv" value="string" />
+    <ref role="1TJDcQ" node="6DnZTr$1yXj" resolve="MyType" />
+  </node>
+  <node concept="1TIwiD" id="6DnZTr$1yXq">
+    <property role="EcuMT" value="7662874314529976154" />
+    <property role="TrG5h" value="BooleanType" />
+    <property role="34LRSv" value="bool" />
+    <ref role="1TJDcQ" node="6DnZTr$1yXj" resolve="MyType" />
   </node>
 </model>
 
