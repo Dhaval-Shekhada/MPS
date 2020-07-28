@@ -101,15 +101,15 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       producer.produceWarning(myRuleModelId, myRuleNodeId);
     }
     private static SNode createIntegerType_3ist9o_a0a0a1() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$Eo);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$G4);
       return rootBuilder1.getResult();
     }
     private static SNode createIntegerType_3ist9o_a0b0a1() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$Eo);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$G4);
       return rootBuilder1.getResult();
     }
     private static SNode createBooleanType_3ist9o_a0a1b() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.BooleanType$8G);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.BooleanType$T9);
       return rootBuilder1.getResult();
     }
   }
@@ -133,15 +133,15 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       producer.produceWarning(myRuleModelId, myRuleNodeId);
     }
     private static SNode createStringType_3ist9o_a0a0a2() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$SE);
       return rootBuilder1.getResult();
     }
     private static SNode createStringType_3ist9o_a0b0a2() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$SE);
       return rootBuilder1.getResult();
     }
     private static SNode createBooleanType_3ist9o_a0a1c() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.BooleanType$8G);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.BooleanType$T9);
       return rootBuilder1.getResult();
     }
   }
@@ -158,22 +158,22 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myRuleNodeId = "1069986690423847162";
     }
     public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
-      return createBooleanType_3ist9o_a0a1d();
+      return createIntegerType_3ist9o_a0a1d();
     }
     @Override
     public void reportConflict(IRuleConflictWarningProducer producer) {
       producer.produceWarning(myRuleModelId, myRuleNodeId);
     }
     private static SNode createIntegerType_3ist9o_a0a0a3() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$Eo);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$G4);
       return rootBuilder1.getResult();
     }
     private static SNode createIntegerType_3ist9o_a0b0a3() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$Eo);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$G4);
       return rootBuilder1.getResult();
     }
-    private static SNode createBooleanType_3ist9o_a0a1d() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.BooleanType$8G);
+    private static SNode createIntegerType_3ist9o_a0a1d() {
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.IntegerType$G4);
       return rootBuilder1.getResult();
     }
   }
@@ -197,24 +197,24 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       producer.produceWarning(myRuleModelId, myRuleNodeId);
     }
     private static SNode createStringType_3ist9o_a0a0a4() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$SE);
       return rootBuilder1.getResult();
     }
     private static SNode createStringType_3ist9o_a0b0a4() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$SE);
       return rootBuilder1.getResult();
     }
     private static SNode createStringType_3ist9o_a0a1e() {
-      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
+      SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$SE);
       return rootBuilder1.getResult();
     }
   }
   private static SNode createStringType_3ist9o_a0a0a0a0a0a0a41a0() {
-    SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
+    SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$SE);
     return rootBuilder1.getResult();
   }
   private static SNode createStringType_3ist9o_a0a1a0a0a0a0o0a() {
-    SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$2b);
+    SNodeBuilder rootBuilder1 = new SNodeBuilder().init(CONCEPTS.StringType$SE);
     return rootBuilder1.getResult();
   }
 
@@ -222,8 +222,8 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     /*package*/ static final SConcept BinaryComaprisionExpression$5b = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b04L, "FirstLanguage.structure.BinaryComaprisionExpression");
     /*package*/ static final SConcept BinaryArithmaicOperations$5E = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0xed95b39d5018b05L, "FirstLanguage.structure.BinaryArithmaicOperations");
     /*package*/ static final SConcept PlusExpression$Pj = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55672a2L, "FirstLanguage.structure.PlusExpression");
-    /*package*/ static final SConcept IntegerType$Eo = MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf940d22479L, "jetbrains.mps.baseLanguage.structure.IntegerType");
-    /*package*/ static final SConcept BooleanType$8G = MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf940d6513eL, "jetbrains.mps.baseLanguage.structure.BooleanType");
-    /*package*/ static final SConcept StringType$2b = MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x11d47da71ecL, "jetbrains.mps.baseLanguage.structure.StringType");
+    /*package*/ static final SConcept IntegerType$G4 = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f54L, "FirstLanguage.structure.IntegerType");
+    /*package*/ static final SConcept BooleanType$T9 = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f5aL, "FirstLanguage.structure.BooleanType");
+    /*package*/ static final SConcept StringType$SE = MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f59L, "FirstLanguage.structure.StringType");
   }
 }

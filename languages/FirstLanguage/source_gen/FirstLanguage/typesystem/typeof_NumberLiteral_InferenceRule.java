@@ -20,7 +20,7 @@ public class typeof_NumberLiteral_InferenceRule extends AbstractInferenceRule_Ru
     {
       SNode _nodeToCheck_1029348928467 = numberLiteral;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:d7cecf31-6279-4e7d-9549-15abd87eee34(FirstLanguage.typesystem)", "7695600049411194057", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:d7cecf31-6279-4e7d-9549-15abd87eee34(FirstLanguage.typesystem)", "7695600049411185218", true), (SNode) SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf940d22479L, "jetbrains.mps.baseLanguage.structure.IntegerType")), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:d7cecf31-6279-4e7d-9549-15abd87eee34(FirstLanguage.typesystem)", "7695600049411185218", true), (SNode) SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x6a57ff96e4062f54L, "FirstLanguage.structure.IntegerType")), _info_12389875345);
     }
 
   }

@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/FirstLanguage/FirstLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/FirstLanguage/sandbox/FirstLanguage.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/test.language/test.language.mpl" folder="" />
     </projectModules>
   </component>
 </project>

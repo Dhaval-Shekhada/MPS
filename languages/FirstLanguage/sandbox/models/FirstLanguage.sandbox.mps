@@ -4,10 +4,12 @@
   <languages>
     <use id="7948aebf-5e1b-4d63-b7a7-a346bd29db6d" name="FirstLanguage" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="9" />
+    <use id="1606807d-d80b-4c35-b33d-eca189f545c2" name="test.language" version="0" />
   </languages>
   <imports />
   <registry>
     <language id="7948aebf-5e1b-4d63-b7a7-a346bd29db6d" name="FirstLanguage">
+      <concept id="7662874314529976148" name="FirstLanguage.structure.IntegerType" flags="ng" index="2ekt32" />
       <concept id="7662874314529976154" name="FirstLanguage.structure.BooleanType" flags="ng" index="2ekt3c" />
       <concept id="7662874314529976153" name="FirstLanguage.structure.StringType" flags="ng" index="2ekt3f" />
       <concept id="8410892501255534147" name="FirstLanguage.structure.EmptyStatement" flags="ng" index="2LV4xD" />
@@ -21,10 +23,10 @@
       <concept id="8410892501255714215" name="FirstLanguage.structure.StringLateral" flags="ng" index="2LVCId">
         <property id="8410892501255714216" name="value" index="2LVCI2" />
       </concept>
+      <concept id="8410892501255615138" name="FirstLanguage.structure.PlusExpression" flags="ng" index="2LVKM8" />
       <concept id="8410892501255604489" name="FirstLanguage.structure.NumberLiteral" flags="ng" index="2LVNsz">
         <property id="8410892501255604490" name="value" index="2LVNsw" />
       </concept>
-      <concept id="8410892501255604492" name="FirstLanguage.structure.Expression" flags="ng" index="2LVNsA" />
       <concept id="8410892501255625854" name="FirstLanguage.structure.BinaryExpression" flags="ng" index="2LVY9k">
         <child id="8410892501255625855" name="left" index="2LVY9l" />
         <child id="8410892501255625857" name="right" index="2LVYaF" />
@@ -34,6 +36,14 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="1606807d-d80b-4c35-b33d-eca189f545c2" name="test.language">
+      <concept id="2305517365451353735" name="test.language.structure.TestSuite" flags="ng" index="SLz_j">
+        <child id="2305517365451353743" name="tests" index="SLz_r" />
+      </concept>
+      <concept id="2305517365451353736" name="test.language.structure.TestCase" flags="ng" index="SLz_s">
+        <child id="2305517365451353797" name="content" index="SLz$h" />
       </concept>
     </language>
   </registry>
@@ -60,11 +70,42 @@
       <node concept="2ekt3c" id="6DnZTr$6nhT" role="3rX9hA" />
     </node>
     <node concept="2LVvJE" id="6DnZTr$83a4" role="2LVvJI">
-      <property role="TrG5h" value="a" />
-      <node concept="2LVNsA" id="6DnZTr$83a6" role="2LVNsV" />
+      <property role="TrG5h" value="e" />
+      <node concept="2LVNsz" id="23JuYp5sEnO" role="2LVNsV">
+        <property role="2LVNsw" value="5" />
+      </node>
     </node>
-    <node concept="2LV4xD" id="6DnZTr$6nmp" role="2LVvJI" />
+    <node concept="2LVvJE" id="7uRkE3XIEga" role="2LVvJI">
+      <property role="TrG5h" value="d" />
+      <node concept="2LVKM8" id="7uRkE3XJ_AA" role="2LVNsV">
+        <node concept="2LVNsz" id="7uRkE3XJ_AU" role="2LVYaF">
+          <property role="2LVNsw" value="5" />
+        </node>
+        <node concept="2LVNsz" id="7uRkE3XIEgO" role="2LVY9l">
+          <property role="2LVNsw" value="6" />
+        </node>
+      </node>
+    </node>
+    <node concept="2LV4xD" id="7uRkE3XIEgw" role="2LVvJI" />
     <node concept="2LV4xD" id="VpmNBl0oA1" role="2LVvJI" />
+  </node>
+  <node concept="SLz_j" id="7uRkE3XIzJh">
+    <property role="TrG5h" value="myTest" />
+    <node concept="SLz_s" id="7uRkE3XKL4F" role="SLz_r">
+      <property role="TrG5h" value="as" />
+      <node concept="2LVvJE" id="7uRkE3XKL4J" role="SLz$h">
+        <property role="TrG5h" value="a" />
+        <node concept="2LVKM8" id="7uRkE3XKL58" role="2LVNsV">
+          <node concept="2LVNsz" id="7uRkE3XKL5s" role="2LVYaF">
+            <property role="2LVNsw" value="4" />
+          </node>
+          <node concept="2LVNsz" id="7uRkE3XKL4Z" role="2LVY9l">
+            <property role="2LVNsw" value="5" />
+          </node>
+        </node>
+        <node concept="2ekt32" id="7uRkE3XLmQp" role="3rX9hA" />
+      </node>
+    </node>
   </node>
 </model>
 
