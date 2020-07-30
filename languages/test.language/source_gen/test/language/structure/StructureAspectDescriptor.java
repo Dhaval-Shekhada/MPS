@@ -13,6 +13,7 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptAssertStatement = createDescriptorForAssertStatement();
   /*package*/ final ConceptDescriptor myConceptTestCase = createDescriptorForTestCase();
   /*package*/ final ConceptDescriptor myConceptTestSuite = createDescriptorForTestSuite();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -24,19 +25,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
+    deps.extendedLanguage(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, "FirstLanguage");
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
     deps.aggregatedLanguage(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, "FirstLanguage");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptTestCase, myConceptTestSuite);
+    return Arrays.asList(myConceptAssertStatement, myConceptTestCase, myConceptTestSuite);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.AssertStatement:
+        return myConceptAssertStatement;
       case LanguageConceptSwitch.TestCase:
         return myConceptTestCase;
       case LanguageConceptSwitch.TestSuite:
@@ -55,6 +59,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForAssertStatement() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("test.language", "AssertStatement", 0x1606807dd80b4c35L, 0xb33deca189f545c2L, 0x77b752a0fdc56db1L);
+    b.class_(false, false, false);
+    b.super_("FirstLanguage.structure.Statement", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c1L);
+    b.origin("r:8f72e808-c734-4941-bbe6-e336fc5070af(test.language.structure)/8626454462657293745");
+    b.version(2);
+    b.aggregate("expr", 0x77b752a0fdc56db2L).target(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac556490cL).optional(false).ordered(true).multiple(false).origin("8626454462657293746").done();
+    b.alias("assert");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForTestCase() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("test.language", "TestCase", 0x1606807dd80b4c35L, 0xb33deca189f545c2L, 0x1ffed7d42738ee88L);
     b.class_(false, false, false);

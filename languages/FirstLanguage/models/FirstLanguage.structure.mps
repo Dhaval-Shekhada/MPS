@@ -271,5 +271,17 @@
     <property role="34LRSv" value="bool" />
     <ref role="1TJDcQ" node="6DnZTr$1yXj" resolve="MyType" />
   </node>
+  <node concept="1TIwiD" id="7uRkE3XLvcw">
+    <property role="EcuMT" value="8626454462657327904" />
+    <property role="3GE5qa" value="expr" />
+    <property role="TrG5h" value="VarReference" />
+    <ref role="1TJDcQ" node="7iTvyF5l$$c" resolve="Expression" />
+    <node concept="1TJgyj" id="7uRkE3XLvcx" role="1TKVEi">
+      <property role="IQ2ns" value="8626454462657327905" />
+      <property role="20kJfa" value="variable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7iTvyF5l8n0" resolve="Variable" />
+    </node>
+  </node>
 </model>
 

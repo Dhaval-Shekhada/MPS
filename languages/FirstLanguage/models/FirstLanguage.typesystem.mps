@@ -862,7 +862,7 @@
           <node concept="2ShNRf" id="6DnZTr$5JeC" role="mwGJk">
             <node concept="3zrR0B" id="6DnZTr$5Kml" role="2ShVmc">
               <node concept="3Tqbb2" id="6DnZTr$5Kmn" role="3zrR0E">
-                <ref role="ehGHo" to="go1j:6DnZTr$1yXk" resolve="IntegerType" />
+                <ref role="ehGHo" to="tpee:f_0OyhT" resolve="IntegerType" />
               </node>
             </node>
           </node>
@@ -889,7 +889,7 @@
           <node concept="2ShNRf" id="6DnZTr$5Kv9" role="mwGJk">
             <node concept="3zrR0B" id="6DnZTr$5KyG" role="2ShVmc">
               <node concept="3Tqbb2" id="6DnZTr$5KyU" role="3zrR0E">
-                <ref role="ehGHo" to="go1j:6DnZTr$1yXq" resolve="BooleanType" />
+                <ref role="ehGHo" to="tpee:f_0P_4Y" resolve="BooleanType" />
               </node>
             </node>
           </node>

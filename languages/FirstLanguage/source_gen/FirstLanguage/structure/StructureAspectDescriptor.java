@@ -37,6 +37,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStatement = createDescriptorForStatement();
   /*package*/ final ConceptDescriptor myConceptStringLateral = createDescriptorForStringLateral();
   /*package*/ final ConceptDescriptor myConceptStringType = createDescriptorForStringType();
+  /*package*/ final ConceptDescriptor myConceptVarReference = createDescriptorForVarReference();
   /*package*/ final ConceptDescriptor myConceptVariable = createDescriptorForVariable();
   /*package*/ final ConceptDescriptor myConceptWorkbook = createDescriptorForWorkbook();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -53,7 +54,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBinaryArithmaicOperations, myConceptBinaryComaprisionExpression, myConceptBinaryExpression, myConceptBooleanType, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpression, myConceptExpressionStatement, myConceptGreaterEqualExpression, myConceptGreaterThanExpression, myConceptIntegerType, myConceptLessThanEqualExpression, myConceptLessThanExpression, myConceptMinusExpression, myConceptMulExpression, myConceptMyType, myConceptNotEqualExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptStatement, myConceptStringLateral, myConceptStringType, myConceptVariable, myConceptWorkbook);
+    return Arrays.asList(myConceptBinaryArithmaicOperations, myConceptBinaryComaprisionExpression, myConceptBinaryExpression, myConceptBooleanType, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpression, myConceptExpressionStatement, myConceptGreaterEqualExpression, myConceptGreaterThanExpression, myConceptIntegerType, myConceptLessThanEqualExpression, myConceptLessThanExpression, myConceptMinusExpression, myConceptMulExpression, myConceptMyType, myConceptNotEqualExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptStatement, myConceptStringLateral, myConceptStringType, myConceptVarReference, myConceptVariable, myConceptWorkbook);
   }
 
   @Override
@@ -106,6 +107,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptStringLateral;
       case LanguageConceptSwitch.StringType:
         return myConceptStringType;
+      case LanguageConceptSwitch.VarReference:
+        return myConceptVarReference;
       case LanguageConceptSwitch.Variable:
         return myConceptVariable;
       case LanguageConceptSwitch.Workbook:
@@ -322,6 +325,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/7662874314529976153");
     b.version(2);
     b.alias("string");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForVarReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("FirstLanguage", "VarReference", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x77b752a0fdc5f320L);
+    b.class_(false, false, false);
+    b.super_("FirstLanguage.structure.Expression", 0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac556490cL);
+    b.origin("r:9682daf1-3878-4e7e-93f3-95707e163a48(FirstLanguage.structure)/8626454462657327904");
+    b.version(2);
+    b.associate("variable", 0x77b752a0fdc5f321L).target(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x74b97e2ac55485c0L).optional(false).origin("8626454462657327905").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVariable() {

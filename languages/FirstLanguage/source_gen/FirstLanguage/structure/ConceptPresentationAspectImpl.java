@@ -32,6 +32,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Statement;
   private ConceptPresentation props_StringLateral;
   private ConceptPresentation props_StringType;
+  private ConceptPresentation props_VarReference;
   private ConceptPresentation props_Variable;
   private ConceptPresentation props_Workbook;
 
@@ -195,6 +196,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StringType = cpb.create();
         }
         return props_StringType;
+      case LanguageConceptSwitch.VarReference:
+        if (props_VarReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL, 0x77b752a0fdc5f320L, 0x77b752a0fdc5f321L, "variable", "", "");
+          props_VarReference = cpb.create();
+        }
+        return props_VarReference;
       case LanguageConceptSwitch.Variable:
         if (props_Variable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -32,8 +32,9 @@ public final class LanguageConceptSwitch {
   public static final int Statement = 20;
   public static final int StringLateral = 21;
   public static final int StringType = 22;
-  public static final int Variable = 23;
-  public static final int Workbook = 24;
+  public static final int VarReference = 23;
+  public static final int Variable = 24;
+  public static final int Workbook = 25;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x7948aebf5e1b4d63L, 0xb7a7a346bd29db6dL);
@@ -60,6 +61,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x74b97e2ac55485c1L, Statement);
     builder.put(0x74b97e2ac557f5a7L, StringLateral);
     builder.put(0x6a57ff96e4062f59L, StringType);
+    builder.put(0x77b752a0fdc5f320L, VarReference);
     builder.put(0x74b97e2ac55485c0L, Variable);
     builder.put(0x74b97e2ac55485bfL, Workbook);
     myIndex = builder.seal();
